@@ -1,29 +1,30 @@
+# coding utf-8
 
 from tkinter import *
 from tkinter.ttk import Combobox
 
-root = Tk() # создаем окно
-root.title("Hello World!") # заголовок
-root.geometry('300x300') # размер окна
+root = Tk() # Г±Г®Г§Г¤Г ГҐГ¬ Г®ГЄГ­Г®
+root.title("Hello World!") # Г§Г ГЈГ®Г«Г®ГўГ®ГЄ
+root.geometry('300x300') # Г°Г Г§Г¬ГҐГ° Г®ГЄГ­Г 
 
 
-# callback - при нажатии на кнопку
+# callback - ГЇГ°ГЁ Г­Г Г¦Г ГІГЁГЁ Г­Г  ГЄГ­Г®ГЇГЄГі
 def button_clicked():
     print(e.get())
 
-# при закрытии
+# ГЇГ°ГЁ Г§Г ГЄГ°Г»ГІГЁГЁ
 def close():
     root.destroy()
     root.quit()
 
 
-# создаем кнопку
+# Г±Г®Г§Г¤Г ГҐГ¬ ГЄГ­Г®ГЇГЄГі
 button = Button(root, text="Press Me", command=button_clicked, height="5")
-button.pack(fill=BOTH) # отобразить на окне
+button.pack(fill=BOTH) # Г®ГІГ®ГЎГ°Г Г§ГЁГІГј Г­Г  Г®ГЄГ­ГҐ
 
-# создаем текстовое поле
+# Г±Г®Г§Г¤Г ГҐГ¬ ГІГҐГЄГ±ГІГ®ГўГ®ГҐ ГЇГ®Г«ГҐ
 e = Entry(root)
-e.pack() # отобразить
+e.pack() # Г®ГІГ®ГЎГ°Г Г§ГЁГІГј
 
 # e.delete(0, END)
 # e.insert(0, "a default value")
@@ -45,7 +46,7 @@ def makeentry(parent, caption, width=None, **options):
 #     print(user.get(), password.get())
 #
 # login = Button(root, text="Login", command=login_clicked, height="5")
-# login.pack(fill=BOTH) # отобразить на окне
+# login.pack(fill=BOTH) # Г®ГІГ®ГЎГ°Г Г§ГЁГІГј Г­Г  Г®ГЄГ­ГҐ
 
 def set(*args):
     print(combo.get())
@@ -57,6 +58,6 @@ combo.bind('<<ComboboxSelected>>', set)
 combo.pack()
 
 
-root.protocol('WM_DELETE_WINDOW', close) # закроется приложение по закрытию окна
+root.protocol('WM_DELETE_WINDOW', close) # Г§Г ГЄГ°Г®ГҐГІГ±Гї ГЇГ°ГЁГ«Г®Г¦ГҐГ­ГЁГҐ ГЇГ® Г§Г ГЄГ°Г»ГІГЁГѕ Г®ГЄГ­Г 
 
-root.mainloop() # запускаем программу
+root.mainloop() # Г§Г ГЇГіГ±ГЄГ ГҐГ¬ ГЇГ°Г®ГЈГ°Г Г¬Г¬Гі
